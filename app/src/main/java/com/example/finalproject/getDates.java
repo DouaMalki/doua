@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class getDates extends AppCompatActivity {
 
     private Button startDateButton;
     private Button endDateButton;
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.get_dates);
 
         startDateButton = findViewById(R.id.start_date_button);
         endDateButton = findViewById(R.id.end_date_button);
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("end_date", endDate);
                 startActivity(intent);
             } else {
-                Toast.makeText(MainActivity.this, "Please select both start and end dates.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getDates.this, "Please select both start and end dates.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(
-                MainActivity.this,
+                getDates.this,
                 (view, year1, month1, dayOfMonth) -> {
                     String selectedDate = year1 + "-" + String.format("%02d", (month1 + 1)) + "-" + String.format("%02d", dayOfMonth);
                     if (isStartDate) {

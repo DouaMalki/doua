@@ -1,6 +1,6 @@
 package com.example.finalproject;
 
-public class Car {
+public class Car_in_recycler {
     private int id;
     private String image_url;
     private double price;
@@ -8,7 +8,7 @@ public class Car {
     private String model;
     private String make_date;
 
-    public Car(int id, String image_url, double price, double rating, String model, String make_date) {
+    public Car_in_recycler(int id, String image_url, double price, double rating, String model, String make_date) {
         this.id = id;
         this.image_url = image_url;
         this.price = price;

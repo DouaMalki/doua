@@ -33,8 +33,8 @@ import java.util.List;
 public class ListCars extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private CarAdapter carAdapter;
-    private List<Car> cars = new ArrayList<>();
+    private CarAdapter_recycler carAdapter;
+    private List<Car_in_recycler> cars = new ArrayList<>();
     private String startDate, endDate;
 
     Button btn_open_drawer;
@@ -48,7 +48,7 @@ public class ListCars extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        carAdapter = new CarAdapter(this, cars, startDate, endDate);
+        carAdapter = new CarAdapter_recycler(this, cars, startDate, endDate);
         recyclerView.setAdapter(carAdapter);
 
         //get the start and the end selected dates, to view the available cars at this time interval
@@ -121,7 +121,7 @@ public class ListCars extends AppCompatActivity {
                         } else {
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                cars.add(new Car(
+                                cars.add(new Car_in_recycler(
                                         object.getInt("id"),
                                         object.getString("image_url"),
                                         object.getDouble("price"),

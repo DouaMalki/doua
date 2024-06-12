@@ -15,13 +15,13 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
+public class CarAdapter_recycler extends RecyclerView.Adapter<CarAdapter_recycler.ViewHolder> {
     private Context context;
-    private List<Car> cars;
+    private List<Car_in_recycler> cars;
     private String startDate;
     private String endDate;
 
-    public CarAdapter(Context context, List<Car> cars, String startDate, String endDate) {
+    public CarAdapter_recycler(Context context, List<Car_in_recycler> cars, String startDate, String endDate) {
         this.context = context;
         this.cars = cars;
         this.startDate = startDate;
@@ -36,7 +36,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Car car = cars.get(position);
+        Car_in_recycler car = cars.get(position);
         ImageView carImageView = holder.cardView.findViewById(R.id.carImageView);
         TextView carInfo = holder.cardView.findViewById(R.id.car_info);
 
