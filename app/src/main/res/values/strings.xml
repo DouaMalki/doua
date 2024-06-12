@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">final project</string>
+    <string name="todo" />
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="search">Search</string>
+    <string name="book">Book</string>
+    <string name="make_date_prompt" />
+    <string name="sort_prompt" />
+    <string name="model_prompt" />
+    <string name="select_model">Select Model</string>
+    <string name="select_make_date">Select Make Date</string>
+    <string name="sort_options">Sort Options</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="filter_options">Select Filters</string>
+    <string name="model">*Select Model</string>
+    <string name="make_date">*Select Make Date</string>
+    <string name="sort_by">*Sorted by</string>
+
+    <string-array name="sorting_options">
+        <item>Price Low to High</item>
+        <item>Price High to Low</item>
+        <item>Rating Low to High</item>
+        <item>Rating High to Low</item>
+        <item>make date Low to High</item>
+        <item>make date High to Low</item>
+    </string-array>
+</resources>
